@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  body{
+    overflow: hidden;
+  }
+  svg {
+    border: 10px solid black;
+  }
+  h1 {
+    transform: translateX(200px);
+  }
+  .title {
+    font-size: 1.2em;
+
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .gameOverShow {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-color: black;
+  }
+  .hide {
+    display: none;
+  }
+  .gameOverText,
+  .gameOverSubtext {
+    display: flex;
+    justify-content: center;
+    color: red;
+    transform: translateY(250px);
+  }
+  .gameOverText {
+    font-size: 3em;
+  }
+  .gameOverSubtext {
+    font-size: 1.2em;
+  }
+
+  .show {
+    color: red;
+  }
+  .highlight {
+    color: red;
+  }
+  .key {
+    width: 18px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: lightgray;
+  }
+  .highlight {
+    background-color: pink;
+  }
+  div#controls {
+    /* width: 600px; */
+
+    margin: 50px;
+  }
+  .instructions {
+    /* float: right; */
+    position: absolute;
+    transform: translate(700px, -20px);
+    width: auto;
+    height: auto;
+  }
+  li {
+    margin: 10px 10px 10px 10px;
+    font-size: 1.3em;
+    font-weight: 400;
+  }

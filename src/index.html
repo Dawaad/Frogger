@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>Frogger Implementation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        
+      }
+      svg {
+        border: 10px solid black;
+      }
+      h1 {
+        transform: translateX(200px);
+      }
+      .title {
+        font-size: 1.2em;
+
+        margin-left: 50px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .gameOverShow {
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        background-color: black;
+      }
+      .hide {
+        display: none;
+      }
+      .gameOverText,
+      .gameOverSubtext {
+        display: flex;
+        justify-content: center;
+        color: red;
+        transform: translateY(250px);
+      }
+      .gameOverText {
+        font-size: 3em;
+      }
+      .gameOverSubtext {
+        font-size: 1.2em;
+      }
+
+      .show {
+        color: red;
+      }
+      .highlight {
+        color: red;
+      }
+      .key {
+        width: 18px;
+        text-align: center;
+        border-radius: 3px;
+        background-color: lightgray;
+      }
+      .highlight {
+        background-color: pink;
+      }
+      div#controls {
+        /* width: 600px; */
+
+        margin: 50px;
+      }
+      .instructions {
+        /* float: right; */
+        position: absolute;
+        transform: translate(700px, -20px);
+        width: auto;
+        height: auto;
+      }
+      li {
+        margin: 10px 10px 10px 10px;
+        font-size: 1.3em;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Frogger</h1>
+    
+    <div>
+      <span id="score" class="title"></span>
+      <span id="highScore" class="title"></span>
+      <span id="fishDissapear" class="hide title"
+        >THE FISH ARE DISSAPEARING</span
+      >
+    </div>
+    <div id="gameover" class="gameOverHide">
+      <div id="gameOverText" class="gameOverText">You Died</div>
+      <div id="gameOverText" class="gameOverSubText">Press R to Restart</div>
+    </div>
+    <div class="instructions">
+      <h1>Instructions</h1>
+      <ul class="list">
+        <li>Use your WASD keys to move your frog</li>
+        <li>
+          The main objective is to guide your frog to any of the active Drop
+          Zones
+        </li>
+        <li>
+          Once all drop zones have been filled, you must begin your journey
+          again, only with more haste this time
+        </li>
+        <li>
+          Be careful of the Cars and Trucks that fill the road, they will end
+          your journey swifty
+        </li>
+        <li>Watch out for the fish, who will dissapear before you know it</li>
+        <li>
+          Be mindful of the turtles and their shells, who will only help your
+          traversal to a drop zone once.
+        </li>
+      </ul>
+    </div>
+    <svg id="svgCanvas" width="600" height="600">
+      <rect id="frog" transform="translate(300,540)"></rect>
+    </svg>
+    <div id="controls">
+      <h2>Controls:</h2>
+      <table>
+        <!-- <tr><td>Thrust</td><td>Up Arrow</td></tr> -->
+        <tr>
+          <td>Move Up</td>
+          <td><div id="KeyW" class="key">W</div></td>
+        </tr>
+        <tr>
+          <td>Move Right</td>
+          <td><div id="KeyD" class="key">D</div></td>
+        </tr>
+        <tr>
+          <td>Move Left</td>
+          <td><div id="KeyA" class="key">A</div></td>
+        </tr>
+        <tr>
+          <td>Move Down</td>
+          <td><div id="KeyS" class="key">S</div></td>
+        </tr>
+        <tr>
+          <td>Reset</td>
+          <td><div id="KeyR" class="key">R</div></td>
+        </tr>
+        <!-- <tr><td>Fire</td><td>Space</td>
+          <tr><td>Restart Game</td><td>F5</td></tr> -->
+      </table>
+    </div>
+  </body>
+</html>
